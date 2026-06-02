@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakta oss – M STHLM AB</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/kontakt.css" />
+  </head>
+  <body>
+    <!-- Sidans gemensamma header med logga och nav -->
+    <header>
+      <a href="index.html">
+        <img
+          src="image/logga.png"
+          alt="Svart bakgrund med vittext som säger M STHLM AB Redovisning"
+        />
+      </a>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+      <nav class="menu">
+        <ul>
+          <li><a href="index.html">Hem</a></li>
+          <li><a href="service.html">Våra tjänster</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Kontaktsidans rubrik -->
+    <main>
+      <img
+        src="image/mailbox.jpg"
+        alt="en svartvit bild på en chessbräda. Bilden är tagen från sidan och texten M STHLM AB, Din partner inom bokföring och personaladministration"
+        class="opacity-80"
+      />
+      <article class="hero-text">
+        <h1>Kontakta oss för kostnadsfri konsultation redan idag!</h1>
+      </article>
+    </main>
+
+    <hr class="divider" />
+
+    <section class="contact-section">
+      <!-- Vänster: kontaktuppgifter -->
+      <div class="contact-info">
+        <p>
+          M STHLM AB - Redovisning<br />
+          Nykvarn<br />
+          Sweden
+        </p>
+        <p>070-4302399</p>
+        <p>info@msthlm.se</p>
+      </div>
+
+      <!-- Höger: formulär -->
+      <div class="form-card">
+        <form action="mailto:info@msthlm.se" method="POST" enctype="text/plain">
+          <div class="field">
+            <label for="namn">Namn <span class="req">*</span></label>
+            <input type="text" id="namn" name="namn" required />
+          </div>
+
+          <div class="field">
+            <label for="telefon">Telefon <span class="req">*</span></label>
+            <input type="tel" id="telefon" name="telefon" required />
+          </div>
+
+          <div class="field">
+            <label for="epost">E-post <span class="req">*</span></label>
+            <input type="email" id="epost" name="epost" required />
+          </div>
+
+          <div class="field">
+            <label for="amne">Ämne <span class="req">*</span></label>
+            <input type="text" id="amne" name="amne" required />
+          </div>
+
+          <div class="field">
+            <label for="meddelande"
+              >Meddelande <span class="req">*</span></label
+            >
+            <textarea id="meddelande" name="meddelande" required></textarea>
+          </div>
+          <button type="submit" class="btn-submit">Skicka</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
