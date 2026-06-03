@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="./styles/kontakt.css" />
   </head>
   <body>
-    <!-- Sidans gemensamma header med logga och nav -->
     <header>
       <a href="index.html">
         <img
@@ -36,11 +35,10 @@
       </nav>
     </header>
 
-    <!-- Kontaktsidans rubrik -->
     <main>
       <img
         src="image/mailbox.jpg"
-        alt="en svartvit bild på en chessbräda. Bilden är tagen från sidan och texten M STHLM AB, Din partner inom bokföring och personaladministration"
+        alt="en svartvit bild på en brevlåda"
         class="opacity-80"
       />
       <article class="hero-text">
@@ -51,23 +49,32 @@
     <hr class="divider" />
 
     <section class="contact-section">
-      <!-- Vänster: kontaktuppgifter -->
       <div class="contact-info">
-        <p>
-          M STHLM AB - Redovisning<br />
-          Nykvarn<br />
-          Sweden
-        </p>
+        <p>M STHLM AB - Redovisning<br />Nykvarn<br />Sweden</p>
         <p>070-4302399</p>
         <p>info@msthlm.se</p>
       </div>
 
-      <!-- Höger: formulär -->
       <div class="form-card">
-        <form action="mailto:info@msthlm.se" method="POST" enctype="text/plain">
+        <form id="kontakt-form">
+          <div class="field">
+            <label for="foretag">Företagsnamn</label>
+            <input type="text" id="foretag" name="foretag" />
+          </div>
+
           <div class="field">
             <label for="namn">Namn <span class="req">*</span></label>
             <input type="text" id="namn" name="namn" required />
+          </div>
+
+          <div class="field">
+            <label for="orgnr">Organisationsnummer / Personnummer</label>
+            <input
+              type="text"
+              id="orgnr"
+              name="orgnr"
+              placeholder="556XXX-XXXX"
+            />
           </div>
 
           <div class="field">
@@ -91,9 +98,18 @@
             >
             <textarea id="meddelande" name="meddelande" required></textarea>
           </div>
+
+          <!-- Bekräftelsemeddelande (dolt från start) -->
+          <p id="form-success" class="form-success" style="display: none">
+            ✓ Tack! Ditt mailprogram öppnas nu med ditt meddelande färdigt att
+            skicka.
+          </p>
+
           <button type="submit" class="btn-submit">Skicka</button>
         </form>
       </div>
     </section>
+
+    <script src="./scripts/kontakt.js"></script>
   </body>
 </html>
