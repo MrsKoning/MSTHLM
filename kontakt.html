@@ -4,29 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./image/logga.png" />
-    <title>Våra tjänster | M STHLM AB – Bokföring, Löner & Redovisning</title>
+    <title>Kontakta oss | M STHLM AB – Kostnadsfri konsultation</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/service.css" />
+    <link rel="stylesheet" href="./styles/kontakt.css" />
 
     <!-- SEO -->
-    <link rel="canonical" href="https://msthlm.se/service.html" />
+    <link rel="canonical" href="https://msthlm.se/kontakt.html" />
     <meta
       name="description"
-      content="M STHLM AB erbjuder bokföring, redovisning, lönehantering, bokslut, årsredovisning och skattedeklaration i Mälardalen. Över 20 års erfarenhet."
+      content="Kontakta M STHLM AB för en kostnadsfri konsultation. Vi hjälper dig med bokföring, lönehantering och redovisning i Mälardalen."
     />
 
     <!-- Delning -->
-    <meta property="og:title" content="Våra tjänster | M STHLM AB" />
+    <meta property="og:title" content="Kontakta oss | M STHLM AB" />
     <meta
       property="og:description"
-      content="Professionell hjälp med bokföring, löner, bokslut, bolagsärenden och skattedeklarationer. Kontakta oss för kostnadsfri konsultation."
+      content="Boka en kostnadsfri konsultation med M STHLM AB – din redovisningsbyrå i Mälardalen."
     />
-    <meta property="og:image" content="https://msthlm.se/image/tjänster.jpg" />
-    <meta property="og:url" content="https://msthlm.se/service.html" />
+    <meta property="og:image" content="https://msthlm.se/image/mailbox.jpg" />
+    <meta property="og:url" content="https://msthlm.se/kontakt.html" />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="sv_SE" />
     <meta name="twitter:card" content="summary_large_image" />
@@ -56,115 +56,92 @@
 
     <main>
       <img
-        src="image/tjänster.jpg"
-        alt="Kontorsmiljö som representerar M STHLM AB:s redovisningstjänster"
+        src="image/mailbox.jpg"
+        alt="en svartvit bild på en brevlåda"
         class="opacity-80"
       />
       <article class="hero-text">
-        <h1>Våra tjänster</h1>
-        <br />
-        <a href="kontakt.html" class="hero-button">Boka en konsultation</a>
+        <h1>Kontakta oss för kostnadsfri konsultation redan idag!</h1>
       </article>
     </main>
 
-    <section class="main-sections">
-      <h3>
-        Låt oss ansvara för ekonomin så att du kan lägga tiden där den gör mest
-        nytta.
-      </h3>
+    <hr class="divider" />
 
-      <section class="accounting">
-        <h2>Bokföring & Redovisning</h2>
-        <img
-          src="./image/bokföring.jpg"
-          alt="Bokföring och redovisning – papper och dator på ett skrivbord"
-        />
-        <p>
-          Vi erbjuder professionell hjälp med bokföring och redovisning för
-          företag som vill ha ordning, effektivitet och full kontroll över sin
-          ekonomi.
-        </p>
-        <ul>
-          <li>Löpande bokföring</li>
-          <li>Momsredovisning och skattedeklarationer</li>
-          <li>Digital bokföring med effektiviserade flöden</li>
-          <li>Fakturahantering och leverantörsbetalningar</li>
-          <li>Ekonomisk rapportering och uppföljning</li>
-        </ul>
-      </section>
+    <section class="contact-section">
+      <div class="contact-info">
+        <p>M STHLM AB - Redovisning<br />Nykvarn<br />Sweden</p>
+        <p>070-4302399</p>
+        <p>info@msthlm.se</p>
+      </div>
 
-      <section class="company">
-        <h2>Bolagsärenden</h2>
-        <img
-          src="./image/bolagsärenden.jpg"
-          alt="Dokument och penna för bolagsregistrering och företagsärenden"
-        />
-        <p>
-          Vi hjälper dig med effektiv hantering av ändringar, registreringar och
-          formalia.
-        </p>
-        <ul>
-          <li>Ändring av styrelse, firmateckning och adress</li>
-          <li>Nyregistrering av aktiebolag</li>
-          <li>Likvidation eller avregistrering</li>
-          <li>Ombildning från enskild firma till aktiebolag</li>
-        </ul>
-      </section>
+      <div class="form-card">
+        <form id="kontakt-form">
+          <div class="field">
+            <label for="foretag">Företagsnamn</label>
+            <input type="text" id="foretag" name="foretag" />
+          </div>
 
-      <section class="financal">
-        <h2>Bokslut & Årsredovisning</h2>
-        <img
-          src="./image/Bokslut1.jpg"
-          alt="Bokslut och årsredovisning – ekonomiska rapporter och dokument"
-        />
-        <p>
-          Professionell hjälp med bokslut och årsredovisning för företag som
-          vill känna sig trygga med att allt blir rätt enligt regelverket – utan
-          onödig stress vid räkenskapsårets slut.
-        </p>
-        <ul>
-          <li>Upprättande av bokslut och specifikationer</li>
-          <li>Årsredovisning för aktiebolag</li>
-        </ul>
-      </section>
+          <div class="field">
+            <label for="namn">Namn <span class="req">*</span></label>
+            <input type="text" id="namn" name="namn" required />
+          </div>
 
-      <section class="taxes">
-        <h2>Skatter & Deklarationer</h2>
-        <img
-          src="./image/papperochmobil.jpg"
-          alt="Skattedeklaration och momsredovisning – mobil och dokument"
-        />
-        <p>
-          Vi hjälper dig att navigera rätt i skattesystemet och se till att dina
-          skattedeklarationer hanteras korrekt, i tid och enligt aktuella
-          regelverk.
-        </p>
-        <ul>
-          <li>Momsredovisning och momsdeklaration</li>
-          <li>Inkomstdeklaration företag</li>
-          <li>Skatteberäkning och preliminär deklaration</li>
-          <li>Hjälp med deklaration och skattefrågor</li>
-        </ul>
-      </section>
+          <div class="field">
+            <label for="orgnr">Organisationsnummer / Personnummer</label>
+            <input
+              type="text"
+              id="orgnr"
+              name="orgnr"
+              placeholder="556XXX-XXXX"
+            />
+          </div>
 
-      <section class="payroll">
-        <h2>Löner</h2>
-        <img
-          src="./image/lönehantering.jpg"
-          alt="Lönehantering och löneadministration för företag"
-        />
-        <p>
-          Vi hanterar hela löneadministrationen åt dig – från löneunderlag och
-          skatteavdrag till rapportering och bokföring.
-        </p>
-        <ul>
-          <li>Löpande lönehantering</li>
-          <li>Arbetsgivardeklaration och rapportering</li>
-          <li>Bokföring av löner</li>
-        </ul>
-      </section>
+          <div class="field">
+            <label for="telefon">Telefon <span class="req">*</span></label>
+            <input type="tel" id="telefon" name="telefon" required />
+          </div>
+
+          <div class="field">
+            <label for="epost">E-post <span class="req">*</span></label>
+            <input type="email" id="epost" name="epost" required />
+          </div>
+
+          <div class="field">
+            <label for="amne">Ämne <span class="req">*</span></label>
+            <input type="text" id="amne" name="amne" required />
+          </div>
+
+          <div class="field">
+            <label for="meddelande"
+              >Meddelande <span class="req">*</span></label
+            >
+            <textarea id="meddelande" name="meddelande" required></textarea>
+          </div>
+
+          <p id="form-success" class="form-success" style="display: none">
+            ✓ Tack! Ditt mailprogram öppnas nu med ditt meddelande färdigt att
+            skicka.
+          </p>
+
+          <input
+            type="checkbox"
+            name="integritetspolicy"
+            id="integritetspolicy"
+            required
+          />
+          <label for="integritetspolicy">
+            Klicka i rutan om du godkänner vår
+            <a href="./integritetspolicy.html" target="_blank"
+              >integritetspolicy</a
+            >
+          </label>
+
+          <button type="submit" class="btn-submit">Skicka</button>
+        </form>
+      </div>
     </section>
 
+    <script src="./scripts/kontakt.js"></script>
     <script>
       const header = document.querySelector("header");
       window.addEventListener("scroll", () => {
