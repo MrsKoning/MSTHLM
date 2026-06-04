@@ -38,7 +38,7 @@
     </header>
     <main>
       <img
-        src="image/våra tjänster.jpg"
+        src="image/tjänster.jpg"
         alt="en svartvit bild på en chessbräda. Bilden är tagen från sidan och texten M STHLM AB, Din partner inom bokföring och personaladministration"
         class="opacity-80"
       />
@@ -142,5 +142,11 @@
         </ul>
       </section>
     </section>
+    <script>
+      const header = document.querySelector("header");
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 80);
+      });
+    </script>
   </body>
 </html>

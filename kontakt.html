@@ -104,12 +104,29 @@
             ✓ Tack! Ditt mailprogram öppnas nu med ditt meddelande färdigt att
             skicka.
           </p>
-
+          <input
+            type="checkbox"
+            name="integritetspolicy"
+            id="integritetspolicy"
+            required
+          />
+          <label for=""
+            >Klicka i rutan om du godkänner vår
+            <a href="./integritetspolicy.html" target="_blank"
+              >integritetspolicy</a
+            >
+          </label>
           <button type="submit" class="btn-submit">Skicka</button>
         </form>
       </div>
     </section>
 
     <script src="./scripts/kontakt.js"></script>
+    <script>
+      const header = document.querySelector("header");
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 80);
+      });
+    </script>
   </body>
 </html>

@@ -1,8 +1,5 @@
 @charset "UTF-8";
 
-html {
-  font-size: clamp(14px, 2vw, 18px);
-}
 /* ===================================
    MAIN OCH HERO SEKTION
    =================================== */
@@ -14,10 +11,11 @@ main {
 }
 
 main img {
+  z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: block;
-  max-height: 500px;
+  /* max-height: 500px; */
   object-fit: cover;
   opacity: 1;
 }

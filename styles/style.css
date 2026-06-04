@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+  font-size: clamp(14px, 2vw, 18px);
+}
 
 body {
   font-family: "Arial", sans-serif;
@@ -18,13 +22,6 @@ h4 {
   margin-top: 0;
 }
 
-img {
-  max-width: 100%;
-}
-html {
-  font-size: clamp(14px, 2vw, 18px);
-}
-
 /* ===================================
    HEADER OCH NAVIGATION
    =================================== */
@@ -33,18 +30,29 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
-  background-color: #ffffff;
-  position: sticky;
+  background: transparent;
+  position: fixed;
   top: 0;
+  width: 100%;
   z-index: 100;
   color: #510b02;
-  box-shadow: 0 1px 0 #e8e0e0;
+  box-shadow: none;
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
 }
-
+header.scrolled {
+  background: #f3f3f3;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
 header img {
   height: 50px;
   width: auto;
   max-height: 50px;
+  background: white;
+}
+header.scrolled img {
+  filter: none;
 }
 
 header #menu-toggle {
@@ -60,7 +68,7 @@ header .menu {
   list-style: none;
   display: none;
   flex-direction: column;
-  background-color: #000000;
+  background: transparent;
   width: 150px;
   position: absolute;
   top: 100%;
@@ -73,6 +81,7 @@ header .menu ul {
   list-style: none;
   padding: 0;
   margin: 0;
+  background: transparent;
 }
 
 header #menu-toggle:checked + .menu-icon + .menu {
@@ -80,10 +89,15 @@ header #menu-toggle:checked + .menu-icon + .menu {
 }
 
 header .menu a {
-  display: block;
-  padding: 10px 15px;
-  color: #ffffff;
-  text-decoration: none;
+  color: #fff;
+  text-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.7),
+    0 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+header.scrolled .menu a {
+  color: #131b23;
+  text-shadow: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,7 +108,7 @@ header .menu a {
   header .menu {
     display: block;
     position: static;
-    background: #ffffff;
+    background: transparent;
     width: auto;
     max-height: none;
     padding: 0;
@@ -115,11 +129,17 @@ header .menu a {
 
   header .menu a {
     padding: 1rem 1rem 0 0;
-    color: #131b23;
+    color: white;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+    text-decoration: none;
   }
 
   header .menu a:hover {
-    color: #510b02;
+    text-decoration: underline;
+  }
+  header.scrolled .menu a {
+    color: #131b23;
+    text-shadow: none;
   }
 }
 
@@ -129,15 +149,16 @@ header .menu a {
 main {
   position: relative;
   display: block;
-  padding: 0;
+  padding-top: 0;
   background-color: #e8c5c3;
 }
 
 main img {
+  z-index: 1;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: block;
-  max-height: 500px;
+  /* max-height: 500px; */
   object-fit: cover;
   opacity: 1;
 }
@@ -156,7 +177,7 @@ main .hero-text {
   font-weight: bolder;
   padding: 1rem 1.2rem;
   border-radius: 0.6rem;
-  max-width: 600px;
+  max-width: 600vh;
   width: 88%;
   text-shadow:
     0 2px 8px rgba(0, 0, 0, 0.65),
@@ -213,14 +234,14 @@ main .hero-text {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 400;
   line-height: 1.2;
-  max-width: 700px;
+  max-width: 800vh;
   margin-bottom: 2rem;
 }
 
 .main-sections p {
-  max-width: 800px;
+  max-width: 800vh;
   font-size: 1.15rem;
-  line-height: 2;
+  /* line-height: 2; */
   color: #3a3a3a;
 }
 

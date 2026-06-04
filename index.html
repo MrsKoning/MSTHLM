@@ -162,5 +162,88 @@
         >
       </section>
     </section>
+    <script>
+      const header = document.querySelector("header");
+      window.addEventListener("scroll", () => {
+        header.classList.toggle("scrolled", window.scrollY > 80);
+      });
+    </script>
+    <!-- Cookie-banner -->
+    <div
+      id="cookie-banner"
+      style="
+        display: none;
+        position: fixed;
+        bottom: 1.5rem;
+        right: 1.5rem;
+        max-width: 320px;
+        background: #131b23;
+        color: #fff;
+        padding: 1.25rem 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        z-index: 9999;
+        font-size: 0.85rem;
+        line-height: 1.6;
+      "
+    >
+      <p style="margin: 0 0 0.75rem">
+        Vi använder nödvändiga cookies för att webbplatsen ska fungera korrekt.
+        <a href="cookies.html" target="_blank" style="color: #e8c5c3"
+          >Läs mer</a
+        >
+      </p>
+      <button
+        onclick="acceptCookies()"
+        style="
+          background: #510b02;
+          color: #fff;
+          border: none;
+          padding: 0.5rem 1.25rem;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 0.85rem;
+          font-weight: 600;
+          margin-right: 0.5rem;
+        "
+      >
+        Godkänn
+      </button>
+      <button
+        onclick="declineCookies()"
+        style="
+          background: transparent;
+          color: #fff;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          padding: 0.5rem 1.25rem;
+          border-radius: 4px;
+          cursor: pointer;
+          font-size: 0.85rem;
+        "
+      >
+        Avvisa
+      </button>
+    </div>
+
+    <script>
+      function showBanner() {
+        const consent = localStorage.getItem("cookieConsent");
+        if (!consent) {
+          document.getElementById("cookie-banner").style.display = "block";
+        }
+      }
+
+      function acceptCookies() {
+        localStorage.setItem("cookieConsent", "accepted");
+        document.getElementById("cookie-banner").style.display = "none";
+      }
+
+      function declineCookies() {
+        localStorage.setItem("cookieConsent", "declined");
+        document.getElementById("cookie-banner").style.display = "none";
+      }
+
+      window.addEventListener("load", showBanner);
+    </script>
   </body>
 </html>
